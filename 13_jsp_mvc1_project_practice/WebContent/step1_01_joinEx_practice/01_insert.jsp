@@ -11,9 +11,9 @@
 	<form method="post" action="01_insertPro.jsp">
 		<fieldset>
 			<legend>회원가입</legend>
-			<p>아이디 : <input type="text" name="id"> </p>
-			<p>비밀번호 : <input type="password" name="passwd"> </p>
-			<p>이름 : <input type="text" name="name"></p>
+			<p>아이디   :  <input type="text" 	  name="id"> </p>
+			<p>비밀번호 :  <input type="password" name="passwd"> </p>
+			<p>이름     :  <input type="text" 	  name="name"></p>
 			<p><input type="submit" value="가입하기"></p>
 		</fieldset>
 	</form>
