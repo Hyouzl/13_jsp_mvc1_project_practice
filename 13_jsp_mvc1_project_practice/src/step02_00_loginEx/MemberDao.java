@@ -29,6 +29,33 @@ public class MemberDao {
 	
 	}
 	
+	public boolean isFirstMember (MemberDto memberDto) {
+		
+		boolean isFirstMember = true;
+		
+		try {
+			getConnection();
+			
+			pstmt = conn.prepareStatement("SELECT * FROM MEMBER WHERE ID = ?");
+			pstmt.setString(1, memberDto.getId());
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				isFirstMember = false; 
+			}
+			
+			  
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			getClose();
+		}
+		return isFirstMember;
+		
+	}
+	
 	public void getClose () {
 		
 		try { rs.close(); } catch (SQLException e) { e.printStackTrace(); }

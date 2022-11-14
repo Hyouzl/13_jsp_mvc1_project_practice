@@ -1,3 +1,5 @@
+<%@page import="step02_00_loginEx.MemberDao"%>
+<%@page import="step02_00_loginEx.MemberDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,7 +12,11 @@
 	<%
 		request.setCharacterEncoding("utf-8");
 	
-		request.getParameter("id");
+		MemberDto memberDto = new MemberDto();
+		
+		
+		memberDto.setId(request.getParameter("id"));
+		memberDto.setPasswd(request.getParameter("passwd"));
 		
 	
 	%>
